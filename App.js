@@ -1,13 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Header } from './src/Components/Header'
 
-export default class App extends React.Component {
+export default class ReactnativeUsableComponents extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Quyen is here</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Header headerName = 'ReactnativeUsableComponents'/>
       </View>
     );
   }
