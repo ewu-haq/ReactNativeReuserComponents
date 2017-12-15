@@ -1,22 +1,39 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Header } from './src/Components/Header'
+import { StyleSheet, View, AppRegistry, Text } from 'react-native';
+import CustomHeader from './src/Components/CustomHeader';
+import AlbumList from './src/Components/AlbumList';
 
-export default class ReactnativeUsableComponents extends React.Component {
+export default class ReactNativeReuserComponents extends React.Component{
   render() {
     return (
-      <View style={styles.container}>
-        <Header headerName = 'ReactnativeUsableComponents'/>
+      <View>
+        <View style={styles.containerStyle}>
+          <CustomHeader 
+            headerName='Reusable Components'
+            fontStyle= {styles.textStyle}
+          />
+        </View>
+        <AlbumList 
+        />
       </View>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+  containerStyle: {
+    backgroundColor: '#FF0000',
     justifyContent: 'center',
+    alignItems: 'center',
+    height: 80,
+    paddingTop: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    elevation: 10,
+    position: 'relative'
   },
+  textStyle: {
+    fontSize: 20
+  }
 });
