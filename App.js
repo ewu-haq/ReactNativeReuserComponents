@@ -13,8 +13,7 @@ export default class ReactNativeReuserComponents extends React.Component{
             fontStyle= {styles.textStyle}
           />
         </View>
-        <AlbumList 
-        />
+        <AlbumList />
       </View>
     )
   }
