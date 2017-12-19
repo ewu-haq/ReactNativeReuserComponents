@@ -6,13 +6,12 @@ import AlbumList from './src/Components/AlbumList';
 export default class ReactNativeReuserComponents extends React.Component{
   render() {
     return (
-      <View>
-        <View style={styles.containerStyle}>
+      <View style={styles.containerStyle}>
           <CustomHeader 
             headerName='Reusable Components'
+            headerStyle={styles.headerStyle}
             fontStyle= {styles.textStyle}
           />
-        </View>
         <AlbumList />
       </View>
     )
@@ -20,7 +19,7 @@ export default class ReactNativeReuserComponents extends React.Component{
 }
 
 const styles = StyleSheet.create({
-  containerStyle: {
+  headerStyle: {
     backgroundColor: '#FF0000',
     justifyContent: 'center',
     alignItems: 'center',
@@ -34,5 +33,8 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     fontSize: 20
+  },
+  containerStyle: {
+    flex: 1
   }
 });

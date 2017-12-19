@@ -8,9 +8,12 @@ class CustomHeader extends Component {
 
     render() {
         return (
-            <Text style={this.props.fontStyle}> 
-                {this.props.headerName}
-            </Text>
+            <View style={this.props.headerStyle}>
+                <Text style={this.props.fontStyle}> 
+                    {this.props.headerName}
+                </Text>
+            </View>
+            
         );
     }
 }
